@@ -3,11 +3,6 @@
   height: 680px;
   background-color: blue;
   color: white;
-  transition: all 3s;
-}
-
-#welcome:hover {
-  background-color: red;
 }
 
 #welcome .videoWrapper {
@@ -18,9 +13,15 @@
 }
 
 #welcome .videoWrapper .overlay {
+  position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 255, .5);
+  transition: all 3s;
+}
+
+#welcome:hover .videoWrapper .overlay {
+  background-color: rgba(255, 0, 0, .5);
 }
 
 #welcome .videoWrapper video {
@@ -34,6 +35,8 @@
   display: -webkit-flex;
   display: flex;
 
+  position: absolute;
+  width: 100%;
   height: 680px;
 }
 
@@ -72,13 +75,13 @@
   -ms-transform-origin: 50% 50%;
 }
 
-@keyframes bounce {
+@keyframes bounce{
   0%   { transform: translate(0px, 0px);  }
   50%  { transform: translate(0px, 20px); }
   100% { transform: translate(0px, 0px);  }
 }
 
-@-moz-keyframes bounce {
+@-moz-keyframes bounce{
   0%   { -moz-transform: translate(0px, 0px);  }
   50%  { -moz-transform: translate(0px, 20px); }
   100% { -moz-transform: translate(0px, 0px);  }
